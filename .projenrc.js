@@ -6,5 +6,10 @@ const project = new typescript.TypeScriptAppProject({
   deps: [
     '@diranged/jsii3000-coremodule-example',
   ],
+  buildWorkflowTriggers: {
+    pullRequest: {},
+    workflowDispatch: {},
+    push: {},
+  },
 });
 project.synth();
