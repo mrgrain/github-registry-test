@@ -2,10 +2,8 @@ const { typescript } = require('projen');
 const project = new typescript.TypeScriptAppProject({
   defaultReleaseBranch: 'main',
   name: 'jsii3000-test',
-
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],             /* Build dependencies for this module. */
-  // packageName: undefined,  /* The "name" in package.json. */
+  deps: [
+    '@diranged/jsii3000-coremodule-example',
+  ],
 });
 project.synth();
